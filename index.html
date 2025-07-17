@@ -33,25 +33,6 @@
             document.body.style.textAlign = "left";
         }
 
-        loadingBar.style.display = "block";
-
-        var script = document.createElement("script");
-        script.src = loaderUrl;
-        script.onload = () => {
-            createUnityInstance(canvas, config, (progress) => {
-                progressBarFull.style.width = 100 * progress + "%";
-            }).then((unityInstance) => {
-                window.gameInstance = unityInstance; //
-                loadingBar.style.display = "none";
-
-                // ✅ Preload ads only AFTER Unity is initialized
-                LoadRewardedAd();
-                LoadInterstitialAd();
-
-            }).catch((message) => {
-                alert(message);
-            });
-
             createUnityInstance(document.querySelector("#unity-canvas"), {
                 dataUrl: "Build/3eb2c89dbefbb945a5a5bc691fe56b22.data.unityweb",
                 frameworkUrl: "Build/c5e3ce1a0242c704135be4d866484562.framework.js.unityweb",
@@ -149,6 +130,9 @@
                 }
             });
         }
+
+                        LoadRewardedAd();
+                LoadInterstitialAd();
     </script>
 
 </body>
