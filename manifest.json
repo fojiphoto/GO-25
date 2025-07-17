@@ -1,0 +1,33 @@
+{
+    "name": "Golf Orbit",
+    "short_name": "Golf Orbit",
+    "description": "An immersive and exciting golf game that challenges your skills with stunning graphics and dynamic gameplay.",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#000000",
+    "theme_color": "#000000",
+    "ms_start_compatible": true,
+    "publisher": "TapNation SAS",
+    "publisher_display_name": "TapNation SAS",
+    "id": "TapNationSAS.GolfOrbit",
+    "launch_handler": {
+        "client_mode": "auto"
+    },
+    "categories": [
+        "games"
+    ],
+    "dir": "auto",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "icon-1920x1080.png",
+            "sizes": "1920x1080",
+            "type": "image/png"
+        },
+        {
+            "src": "icon-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
